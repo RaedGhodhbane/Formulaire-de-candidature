@@ -1,0 +1,38 @@
+<div class="row">
+    <div class="card">
+      <div class="card-header">
+        <h3 class="card-title"> Informations candidat </h3>
+      </div>
+      <!-- /.card-header -->
+      <div class="card-body">
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Nom</th>
+              <th>Prénom</th>
+              <th >Age</th>
+              <th ></th>
+              <th ></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let f of tab">
+                <td>{{f.id}}</td>
+              <td>{{f.nom}}</td>
+              <td>
+                {{f.prenom}}
+              </td>
+              <td>
+                {{f.age}}
+              </td>
+
+              <td> <button (click)="Selectionner(f.id)"> selectionner</button></td>
+              <td> <button (click)="Supprimer(f.id)" > supprimer</button></td>
+            </tr>
+            
+            
+            
+          </tbody>
+        </table>
+      </div>

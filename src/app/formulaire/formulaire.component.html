@@ -1,0 +1,78 @@
+<div class="row">
+<div class="col-md-6">
+    <!-- general form elements -->
+    <div class="card card-primary">
+      <div class="card-header">
+        <h3 class="card-title">Formulaire</h3>
+      </div>
+      <!-- /.card-header -->
+      <!-- form start -->
+      <div>
+        <div class="card-body">
+          <div class="form-group">
+            <label >Nom</label>
+            <input type="text" [(ngModel)]="nom" class="form-control"  placeholder="Nom">
+          </div>
+          <div class="form-group">
+            <label >Prénom</label>
+            <input type="text" [(ngModel)]="prenom" class="form-control"  placeholder="Prénom">
+          </div>
+          <div class="form-group">
+            <label >Email address</label>
+            <input type="email" [(ngModel)]="email" class="form-control"  placeholder="Email">
+          </div>
+         
+         
+        </div>
+        <!-- /.card-body -->
+
+        <div class="card-footer">
+          <button type="submit" (click)="enregistrer()" class="btn btn-primary">Submit</button>
+        </div>
+      </div>
+    </div>
+    <!-- /.card -->
+
+    
+
+  </div>
+  
+
+  <div class="col-md-6">
+    <div class="card">
+      <div class="card-header">
+        <h3 class="card-title"> Informations candidat </h3>
+      </div>
+      <!-- /.card-header -->
+      <div class="card-body">
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+             
+              <th>Nom</th>
+              <th>Prénom</th>
+              <th >Email</th>
+              <th ></th>
+              <th ></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let f of formulaires">
+              <td>{{f.nom}}</td>
+              <td>
+                {{f.prenom}}
+              </td>
+              <td>
+                {{f.email}}
+              </td>
+
+              <td> <button (click)="itemSelected(f)"> selectionner</button></td>
+              <td> <button (click)="supprimer(f.nom)"> supprimer </button></td>
+            </tr>
+            
+            
+            
+          </tbody>
+        </table>
+      </div>
+      </div>

@@ -1,0 +1,92 @@
+
+      <div class="row">
+        <div class="col-md-6">
+
+          <form [formGroup]="form">
+            <div class="row">
+              <div class="col-md-6">
+                <label for="exampleFormControlInput1" class="form-label">Name</label>
+                <input type="text" class="form-control" formControlName="name">
+              </div>
+              <div class="col-md-6">
+              <label for="exampleFormControlInput1" class="form-label">Last Name</label>
+              <input type="text" class="form-control" formControlName="lastname">
+            </div>
+            </div>
+
+            <div class="row">
+              <div class="col-md-6">
+                <label for="exampleFormControlInput1" class="form-label">Email</label>
+                <input type="email" class="form-control" formControlName="email">
+              </div>
+              <div class="col-md-6">
+              <label for="exampleFormControlInput1" class="form-label">Password</label>
+              <input type="password" class="form-control" formControlName="password">
+            </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12">
+                   <label for="exampleFormControlInput1" class="form-label">Role</label>
+                  <select class="form-control" formControlName="role">
+                    <option value="admin">Admin</option>
+                    <option value="user">User</option>
+                  </select>
+                </div>
+               
+              
+            </div>
+            <div class="row">
+              <div class="col-md-2">
+                <button type="button" class="btn btn-success" [disabled]="!form.valid"   (click) = "valider()">Valider</button>
+              </div>
+
+            </div>
+            
+
+            
+
+          </form>
+        </div>
+        <div class="col-md-6">
+           
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+            <th>#</th>
+              <th>Name</th>
+              <th>Latname</th>
+              <th >Email</th>
+              <th >Rôle</th>
+              <th> </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let user of users">
+                <td>{{user._id}}</td>
+              <td>{{user.name}}</td>
+              <td>
+                {{user.lastname}}
+              </td>
+              <td>
+                {{user.email}}
+              </td>
+
+
+              <td>
+                {{user.role}}
+              </td>
+
+              <td>
+                <button  class="btn btn-danger" (click)="delete(user._id)"> Supprimer</button>
+              </td>
+
+            </tr>
+            
+            
+            
+          </tbody>
+        </table>
+        </div>
+
+      </div>
