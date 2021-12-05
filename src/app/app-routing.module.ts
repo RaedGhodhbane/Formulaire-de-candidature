@@ -5,6 +5,7 @@ import { HomeComponent } from './home/home.component';
 import { ListComponentComponent } from './list-component/list-component.component';
 import { ListComponent } from './list/list.component';
 import { LoginComponent } from './login/login.component';
+import { UserComponent } from './user/user.component';
 
 const routes: Routes = [
 {
@@ -31,6 +32,10 @@ component: ListComponent
 {
 path:'users',
 component :ListComponentComponent
+},
+{
+path:'user',
+component :UserComponent
 }
 ]
 }

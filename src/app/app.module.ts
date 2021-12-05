@@ -15,7 +15,8 @@ import { RouterModule } from '@angular/router';
 import {HttpClientModule} from '@angular/common/http';
 import { ListComponentComponent } from './list-component/list-component.component';
 import { HomeComponent } from './home/home.component';
-import { LoginComponent } from './login/login.component'
+import { LoginComponent } from './login/login.component';
+import { UserComponent } from './user/user.component'
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { LoginComponent } from './login/login.component'
     ListComponent,
     ListComponentComponent,
     HomeComponent,
-    LoginComponent
+    LoginComponent,
+    UserComponent
   ],
   imports: [
     BrowserModule,
