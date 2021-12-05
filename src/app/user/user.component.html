@@ -31,3 +31,43 @@
 </div>
 </div>
 
+<div class="col-md-6">
+    <div class="card">
+      <div class="card-header">
+        <h3 class="card-title"> Informations candidat </h3>
+      </div>
+      <!-- /.card-header -->
+      <div class="card-body">
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+             
+              <th>Name</th>
+              <th>LastName</th>
+              <th >Email</th>
+              <th > Role</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let u of users">
+              <td>{{u.name}}</td>
+              <td>
+                {{u.lastname}}
+              </td>
+              <td>
+                {{u.email}}
+              </td>
+              <td>
+                {{u.role}}
+              </td>
+
+            </tr>
+            
+            
+            
+          </tbody>
+        </table>
+      </div>
+      </div>
+ </div>
+

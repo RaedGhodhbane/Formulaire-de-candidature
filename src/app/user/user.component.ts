@@ -9,6 +9,7 @@ import { ApiService } from '../service/api.service';
   styleUrls: ['./user.component.css']
 })
 export class UserComponent implements OnInit {
+  users : User[] = []
   name = ''
   lastName = ''
   email = ''
@@ -16,6 +17,7 @@ export class UserComponent implements OnInit {
   constructor(private apiservice : ApiService) { }
 
   ngOnInit(): void {
+    this.getUser()
   }
 
 save() {
@@ -27,4 +29,10 @@ save() {
   console.log(user)
   this.apiservice.saveUser(user).subscribe(result => {console.log(result)})
 }
-}
+
+getUser() {
+  this.apiservice.getAllUsers().subscribe(res => {
+    this.users = res
+  })
+
+}}
