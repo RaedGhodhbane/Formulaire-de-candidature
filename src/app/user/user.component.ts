@@ -14,7 +14,7 @@ export class UserComponent implements OnInit {
   lastName = ''
   email = ''
   role = ''
-  constructor(private apiservice : ApiService) { }
+  constructor(private apiService : ApiService) { }
 
   ngOnInit(): void {
     this.getUser()
@@ -27,11 +27,11 @@ save() {
   user.email = this.email
   user.role = this.role
   console.log(user)
-  this.apiservice.saveUser(user).subscribe(result => {console.log(result)})
+  this.apiService.saveUser(user).subscribe(result => {this.getUser()})
 }
 
 getUser() {
-  this.apiservice.getAllUsers().subscribe(res => {
+  this.apiService.getAllUsers().subscribe(res => {
     this.users = res
   })
 

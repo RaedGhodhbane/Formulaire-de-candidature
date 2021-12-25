@@ -28,7 +28,7 @@ tab:any[]=[]
     })
   }
 
-  Supprimer(id: number) {
+  Supprimer(id: string) {
     this.apiService.Delete(id).subscribe(res=> {
       this.tab = res
 

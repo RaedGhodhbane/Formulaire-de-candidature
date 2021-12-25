@@ -6,6 +6,7 @@ import { ListComponentComponent } from './list-component/list-component.componen
 import { ListComponent } from './list/list.component';
 import { LoginComponent } from './login/login.component';
 import { UserComponent } from './user/user.component';
+import { User2Component } from './user2/user2.component';
 
 const routes: Routes = [
 {
@@ -36,6 +37,10 @@ component :ListComponentComponent
 {
 path:'user',
 component :UserComponent
+},
+{
+path:'user2',
+component : User2Component
 }
 ]
 }

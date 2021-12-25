@@ -18,7 +18,7 @@ export class ApiService {
     return this.http.get<any>("http://localhost:3000/getbyid/"+id)
   
   }
-  Delete(id:number):Observable<any[]>{
+  Delete(id:string):Observable<any[]>{
     return this.http.get<any[]>("http://localhost:3000/delete/"+id)
   }
   getAllUsers():Observable<User[]>{

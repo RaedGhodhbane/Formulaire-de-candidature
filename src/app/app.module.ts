@@ -16,7 +16,8 @@ import {HttpClientModule} from '@angular/common/http';
 import { ListComponentComponent } from './list-component/list-component.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
-import { UserComponent } from './user/user.component'
+import { UserComponent } from './user/user.component';
+import { User2Component } from './user2/user2.component'
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { UserComponent } from './user/user.component'
     ListComponentComponent,
     HomeComponent,
     LoginComponent,
-    UserComponent
+    UserComponent,
+    User2Component
   ],
   imports: [
     BrowserModule,
