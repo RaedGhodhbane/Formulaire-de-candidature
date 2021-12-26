@@ -12,6 +12,8 @@ export class FormulaireComponent implements OnInit {
   prenom = '';
   email = "";
   formulaires : Formulaire[] = [];
+  isExist = false;
+  message = "";
 
   constructor() { }
 
@@ -39,5 +41,15 @@ supprimer(nom : string) {
   //debugger
   this.formulaires = this.formulaires.filter(a => a.nom != nom)
 
+}
+
+verifier() {
+this.isExist = this.formulaires.some(a => a.nom == this.nom)
+if (this.isExist) {
+  this.message = this.nom + ' exist'
+}
+else {
+  this.message = this.nom + ' doesnt exist'
+} 
 }
 }

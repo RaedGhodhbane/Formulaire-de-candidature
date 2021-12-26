@@ -1,3 +1,11 @@
 .row  {
     flex-direction: row;
 }
+
+.red {
+    color: red;
+}
+
+.green {
+    color : green;
+}
